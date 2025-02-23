@@ -16,7 +16,8 @@
         "VitalRouter",
         "VitalRouter.MRuby",
         "NaughtyAttributes.Core",
-        "uPalette"
+        "uPalette",
+        "LitMotion"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],
