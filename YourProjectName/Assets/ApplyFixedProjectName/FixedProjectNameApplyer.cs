@@ -1,4 +1,6 @@
+#if UNITY_EDITOR
 using NaughtyAttributes;
+using UnityEditor;
 using UnityEngine;
 
 namespace YourProjectName.Editor
@@ -14,10 +16,10 @@ namespace YourProjectName.Editor
         private void ApplyFix()
         {
             // Assets/YourProjectName/ 配下の.csと.asmdef内の YourProjectName を修正
-            var asmdefGuids = UnityEditor.AssetDatabase.FindAssets("t:asmdef", new[] {"Assets/YourProjectName"});
+            var asmdefGuids = AssetDatabase.FindAssets("t:asmdef", new[] {"Assets/YourProjectName"});
             foreach (var asmdefGuid in asmdefGuids)
             {
-                var asmdefPath = UnityEditor.AssetDatabase.GUIDToAssetPath(asmdefGuid);
+                var asmdefPath = AssetDatabase.GUIDToAssetPath(asmdefGuid);
                 var asmdefText = System.IO.File.ReadAllText(asmdefPath);
                 asmdefText = asmdefText.Replace(OriginalProjectName, fixedProjectName);
                 System.IO.File.WriteAllText(asmdefPath, asmdefText);
@@ -33,6 +35,8 @@ namespace YourProjectName.Editor
                 csText = csText.Replace(OriginalProjectName, fixedProjectName);
                 System.IO.File.WriteAllText(csFile, csText);
             }
+            AssetDatabase.Refresh();
         }
     }
 }
+#endif
