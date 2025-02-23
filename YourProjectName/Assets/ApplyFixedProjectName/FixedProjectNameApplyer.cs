@@ -28,6 +28,8 @@ namespace YourProjectName.Editor
                 var fixedAsmdefPath = System.IO.Path.Combine(asmdefFileInfo.DirectoryName ?? "", asmdefFileInfo.Name.Replace(OriginalProjectName, fixedProjectName));
                 System.IO.File.Move(asmdefPath, fixedAsmdefPath);
             }
+            // Assets/YourProjectName/ をリネーム
+            AssetDatabase.MoveAsset($"Assets/{OriginalProjectName}", $"Assets/{fixedProjectName}");
             AssetDatabase.Refresh();
         }
     }
