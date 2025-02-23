@@ -9,7 +9,7 @@ namespace YourProjectName.Editor
     {
         const string OriginalProjectName = "YourProjectName";
 
-        [InfoBox("This script is used to apply fixed project name to all .cs and .asmdef files under Assets/YourProjectName/")]
+        [InfoBox("This script is used to apply fixed project name to Assets/YourProjectName/*.asmdef")]
         [SerializeField] string fixedProjectName = "YourFixedProjectName";
 
         [Button("apply fixed project name")]
@@ -27,13 +27,6 @@ namespace YourProjectName.Editor
                 var asmdefFileInfo = new System.IO.FileInfo(asmdefPath);
                 var fixedAsmdefPath = System.IO.Path.Combine(asmdefFileInfo.DirectoryName ?? "", asmdefFileInfo.Name.Replace(OriginalProjectName, fixedProjectName));
                 System.IO.File.Move(asmdefPath, fixedAsmdefPath);
-            }
-            var csFiles = System.IO.Directory.GetFiles("Assets/YourProjectName", "*.cs", System.IO.SearchOption.AllDirectories);
-            foreach (var csFile in csFiles)
-            {
-                var csText = System.IO.File.ReadAllText(csFile);
-                csText = csText.Replace(OriginalProjectName, fixedProjectName);
-                System.IO.File.WriteAllText(csFile, csText);
             }
             AssetDatabase.Refresh();
         }
