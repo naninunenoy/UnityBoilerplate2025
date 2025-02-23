@@ -1,0 +1,30 @@
+{
+    "name": "YourProjectName",
+    "rootNamespace": "YourProjectName",
+    "references": [
+        "Unity.TextMeshPro",
+        "Unity.InputSystem",
+        "Unity.ResourceManager",
+        "Unity.Addressables",
+        "Unity.Localization",
+        "UniTask",
+        "UniTask.Addressables",
+        "UniTask.Linq",
+        "UniTask.TextMeshPro",
+        "R3.Unity",
+        "VContainer",
+        "VitalRouter",
+        "VitalRouter.MRuby",
+        "NaughtyAttributes.Core",
+        "uPalette"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": false,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

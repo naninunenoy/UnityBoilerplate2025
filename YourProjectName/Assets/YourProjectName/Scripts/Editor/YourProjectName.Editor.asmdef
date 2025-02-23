@@ -1,0 +1,24 @@
+{
+    "name": "YourProjectName.Editor",
+    "rootNamespace": "YourProjectName.Editor",
+    "references": [
+        "YourProjectName",
+        "UniTask",
+        "R3.Unity",
+        "VContainer",
+        "VitalRouter",
+        "NaughtyAttributes.Core",
+        "NaughtyAttributes.Editor"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": false,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
