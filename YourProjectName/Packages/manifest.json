@@ -1,6 +1,7 @@
 {
   "dependencies": {
     "com.annulusgames.lit-motion": "https://github.com/yn01-dev/LitMotion.git?path=src/LitMotion/Assets/LitMotion#v2.0.1",
+    "com.cysharp.csprojmodifier": "https://github.com/Cysharp/CsprojModifier.git?path=src/CsprojModifier/Assets/CsprojModifier",
     "com.cysharp.r3": "1.2.9",
     "com.cysharp.unitask": "2.5.10",
     "com.dbrizov.naughtyattributes": "https://github.com/dbrizov/NaughtyAttributes.git#upm",

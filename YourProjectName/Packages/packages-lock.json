@@ -11,6 +11,13 @@
       },
       "hash": "79e1b02d7df49d55721e427bf41a7b655c675462"
     },
+    "com.cysharp.csprojmodifier": {
+      "version": "https://github.com/Cysharp/CsprojModifier.git?path=src/CsprojModifier/Assets/CsprojModifier",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {},
+      "hash": "9e70e22b3a2187733c1feb56d0c58f6c082ffde7"
+    },
     "com.cysharp.r3": {
       "version": "1.2.9",
       "depth": 0,
